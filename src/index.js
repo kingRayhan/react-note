@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.scss'
 
@@ -13,6 +13,19 @@ const Note = ({ bgColor = '#fff' }) => (
         <p className="time">5 minutes ago</p>
     </div>
 )
+
+const Filters = () => {
+    return (
+        <div className="filter">
+            <button>All (8)</button>
+            <button style={{ backgroundColor: '#D8E2DC' }}>4</button>
+            <button style={{ backgroundColor: '#FFE5D9' }}>4</button>
+            <button style={{ backgroundColor: '#FBFAF0' }}>4</button>
+            <button style={{ backgroundColor: '#FFE9EE' }}>4</button>
+            <button style={{ backgroundColor: '#FFDDE4' }}>4</button>
+        </div>
+    )
+}
 
 const Writter = () => (
     <div className="contextbox">
@@ -38,6 +51,7 @@ const App = () => {
                 <h1 className="app-title">React Notes</h1>
             </div>
             <Writter />
+            <Filters />
             <div className="notes">
                 <Note bgColor="#d8e2dc" />
                 <Note bgColor="#ffe5d9" />
